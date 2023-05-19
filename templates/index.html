@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <title> Yield Prediction </title>
+  </head>
+  <body style="background-color: #4caf50ff; text-align: center; font-size: larger; margin-top: 250px;">
+    <div style="height: 100vh; zoom: 200%;">
+    <form action="/predict" method="post">
+        <!-- id = pclass -->
+    
+   
+    <h3>Yeild Prediction</h3>
+    <img src="/static/agri_logo.jpg" style="border-radius: 50%;" height="100" width="100" alt="agri logo"> <br><br>
+      <label for="state" style="font-weight: 700;">State : </label> 
+      <select id="state" name="state" style="border: 2px solid #323232; border-radius: 10px; height: 40px; width: 240px;">
+        <option value="0">Andaman and Nicobar Islands</option>
+        <option value="1">Andra Pradesh</option>
+        <option value="2">Arunachal Pradesh</option>
+      </select>
+      <br><br>
+
+      <label for="district" style="font-weight: 700; font-size: 16px;">District : </label> 
+      <select id="district" name="district" style="border: 2px solid #323232; border-radius: 10px; height: 40px; width: 250px;">
+        <option value="0">Anantpur</option>
+        <option value="1">Anjaw</option>
+        <option value="2">Chaglang</option>
+        <option value="3">Chittoor</option>
+        <option value="4">East Godavari</option>
+        <option value="5">Guntur</option>
+        <option value="6">Kadapa</option>
+        <option value="7">Krishna</option>
+        <option value="8">Kurnool</option>
+        <option value="9">Nicobars</option>
+        <option value="10">North And Middle Andaman</option>
+        <option value="11">Prakasam</option>
+        <option value="12">South Andamans</option>
+        <option value="13">Spsr Nellore</option>
+        <option value="14">Srikakulam</option>
+        <option value="15">Vishkhapatanam</option>
+        <option value="16">Vizianagaram</option>
+        <option value="17">West Godavari</option>
+      </select>
+
+<br><br>
+      <label for="crop" style="font-weight: 700;">Crops : </label> 
+      <select id="crop" name="crop" style="border: 2px solid #323232; border-radius: 10px; height: 40px; width: 240px;">
+        <option value="0">Arecanut</option>
+        <option value="1">Arhar/Tur</option>
+        <option value="2">Bajra</option>
+        <option value="3">Banana</option>
+        <option value="4">Beans & Mutter(Vegetable)</option>
+        <option value="5">Bhindi</option>
+        <option value="6">Black Pepper</option>
+        <option value="7">Bottle Gourd</option>
+        <option value="8">Brinjal</option>
+        <option value="9">Cabbage</option>
+        <option value="10">Chashewnut</option>
+        <option value="11">Castor Seeds</option>
+        <option value="12">Citrus Fruits</option>
+        <option value="13">Coconut</option>
+        <option value="14">Coriander</option>
+        <option value="15">Cotton(lint)</option>
+        <option value="16">Cowpea(lobia)</option>
+        <option value="17">Cucumber</option>
+        <option value="18">Dry Chilles</option>
+        <option value="19">Dry Ginger</option>
+        <option value="20">Garlic</option>
+        <option value="21">Ginger</option>
+        <option value="22">Gram</option>
+        <option value="23">Grapes</option>
+        <option value="24">Groundnut</option>
+        <option value="25">House gram</option>
+        <option value="26">Jowar</option>
+        <option value="27">Korra</option>
+        <option value="28">Lemon</option>
+        <option value="29">Linseed</option>
+        <option value="30">Maize</option>
+        <option value="31">Mango</option>
+        <option value="32">Masoor</option>
+        <option value="33">Mesta</option>
+        <option value="34">Moong(Green Gram)</option>
+        <option value="35">Nigr Seed</option>
+        <option value="36">Oilseeds total</option>
+        <option value="37">Onion</option>
+        <option value="38">Orange</option>
+        <option value="39">Other Rabi pulses</option>
+        <option value="40">Other Fresh Fruits</option>
+        <option value="41">Other Kharif pulses</option>
+        <option value="42">Other vegetables</option>
+        <option value="43">Papaya</option>
+        <option value="44">Peas(vegtable)</option>
+        <option value="45">Pome Fruit</option>
+        <option value="46">Pome Granet</option>
+        <option value="47">Potato</option>
+        <option value="48">Pulses total</option>
+        <option value="49">Ragi</option>
+        <option value="50">rapeseed & Mustad</option>
+        <option value="51">Rice</option>
+        <option value="52">Safflower</option>
+        <option value="53">Samai</option>
+        <option value="54">Sapota</option>
+        <option value="55">Seasamum</option>
+        <option value="56">Small millets></option>
+        <option value="57">Soyabean</option>
+        <option value="58">Sugarcane</option>
+        <option value="59">Sunflower</option>
+        <option value="60">Sweet Potato</option>
+        <option value="61">Tapioca</option>
+        <option value="62">Tobacco</option>
+        <option value="63">Tomato</option>
+        <option value="64">Turmeric</option>
+        <option value="65">Urad</option>
+        <option value="66">Varagu</option>
+        <option value="67">Wheat</option>
+        <option value="68">Other Fibers</option>
+        <option value="69">Other Misc pulses</option>
+        <option value="70">Other oilseeds</option>
+      </select>    
+<br><br>
+    <label for="season" style="font-weight: 700;">Seasons :  </label> 
+      <select id="season" name="season" style="border: 2px solid #323232; border-radius: 10px; height: 40px; width: 240px;">
+        <option value="0">Autumn</option>
+        <option value="1">Kharif</option>
+        <option value="2">Rabi</option>
+        <option value="3">Whole Year</option>
+      </select>
+<br><br>
+
+      <label for = "field" style="font-weight: 700;">Field Area :   </label>
+      <input type = 'text' id = 'field', name = 'field', style="border: 2px solid #323232; border-radius: 10px; height: 40px; width: 240px; padding: 5px;" required = 'required', placeholder = 'Enter Field Area' />
+<br><br>
+
+    <input id="submit" type="submit" value="Predict" style="width: 140px ; height: 40px; border-radius: 10px; border: 2px solid #323232;" ></input>
+
+    <h4>The Expected yeild is : </h4>
+    <h3 style="color:whitesmoke">{{results}} kg.</h3> 
+</div>
+    </form>
+  </body>
+</html>
